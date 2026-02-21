@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "track"
+version = "0.1.0"
+description = "stealth assessment — infer agent knowledge from behavior"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest>=7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
