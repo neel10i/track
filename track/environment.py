@@ -1,4 +1,4 @@
-"""abstract environment interface for stealth assessment."""
+"""abstract environment interface."""
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
